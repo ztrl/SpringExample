@@ -17,10 +17,11 @@
 
 
 	<bean id="helloService" class="com.coderby.myapp.hello.HelloService"/>
+	<bean id="configurableHelloService" class="com.coderby.myapp.configurable.HelloService"/>
 	
-	<bean id="helloController" class="com.coderby.myapp.hello.HelloController">
+	<!-- <bean id="helloController" class="com.coderby.myapp.hello.HelloController">
 		<property name="helloSerivce" ref="helloService"/>
-	</bean>
+	</bean>  -->
 	
 	<bean id="helloLog" class="com.coderby.myapp.hello.HelloLog"/>
 	
