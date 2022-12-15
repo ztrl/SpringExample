@@ -1,4 +1,4 @@
-package com.coderby.myapp;
+package com.coderby.myapp.hello;
 
 import java.text.DateFormat;
 import java.util.Date;

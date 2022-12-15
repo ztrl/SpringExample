@@ -1,4 +1,4 @@
-package com.coderby.myapp;
+package com.coderby.myapp.hello;
 
 public interface IHelloService {
 	String sayHello(String name);
