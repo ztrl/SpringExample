@@ -40,7 +40,7 @@ public class LogAspect {
 		return message;
 	}
 	
-	@AfterThrowing(pointcut="helloPointcut()", throwing="exception")
+	@AfterThrowing(pointcut="goodbyePointcut()", throwing="exception")
 	public void afterThrowingLog(JoinPoint joinPoint, Exception exception) {
 		System.out.println("[Log:AfterThrowing] Method name: " + joinPoint.getSignature().getName());
 		System.out.println("[Log:AfterThrowing] Exception occur: " + exception.getMessage());
