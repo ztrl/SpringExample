@@ -3,7 +3,7 @@ package com.coderby.myapp.hr;
 import java.sql.Date;
 
 public class EmpVO {
-	private int employId;
+	private int employeeId;
 	private String firstName;
 	private String lastName;
 	private String email;
@@ -15,11 +15,11 @@ public class EmpVO {
 	private int managerId;
 	private int departmentId;
 	
-	public int getEmployId() {
-		return employId;
+	public int getEmployeeId() {
+		return employeeId;
 	}
-	public void setEmployId(int employId) {
-		this.employId = employId;
+	public void setEmployeeId(int employId) {
+		this.employeeId = employId;
 	}
 	public String getFirstName() {
 		return firstName;
@@ -84,7 +84,7 @@ public class EmpVO {
 	
 	@Override
 	public String toString() {
-		return "EmpVO [employId=" + employId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
+		return "EmpVO [employId=" + employeeId + ", firstName=" + firstName + ", lastName=" + lastName + ", email="
 				+ email + ", phoneNumber=" + phoneNumber + ", hireDate=" + hireDate + ", jobId=" + jobId + ", salary="
 				+ salary + ", commissionPct=" + commissionPct + ", managerId=" + managerId + ", departmentId="
 				+ departmentId + "]";

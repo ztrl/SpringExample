@@ -1,5 +1,8 @@
 package com.coderby.myapp.hr;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -7,16 +10,57 @@ import org.springframework.stereotype.Service;
 public class EmpService implements IEmpService {
 
 	@Autowired
-	IEmpRepository repository;
+	IEmpRepository empRepository;
 	
 	@Override
 	public int getEmpCount(int deptid) {
 		if (deptid > 0) {
-			return repository.getEmpCount(deptid);
+			return empRepository.getEmpCount(deptid);
 		}
 		else {
-			return repository.getEmpCount();
+			return empRepository.getEmpCount();
 		}
+	}
+
+	@Override
+	public List<EmpVO> getEmpList() {
+		return empRepository.getEmpList();
+	}
+
+	@Override
+	public EmpVO getEmpInfo(int empid) {
+		return empRepository.getEmpInfo(empid);
+	}
+
+	@Override
+	public void updateEmp(EmpVO emp) {
+		empRepository.updateEmp(emp);
+	}
+
+	@Override
+	public void insertEmp(EmpVO emp) {
+		empRepository.insertEmp(emp);
+	}
+
+	@Override
+	public void deleteEmp(int empid, String email) {
+		empRepository.deleteJobHistory(empid);
+		empRepository.deleteEmp(empid, email);
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllDeptId() {
+		return empRepository.getAllDeptId();
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllJobId() {
+		return empRepository.getAllJobId();
+	}
+
+	@Override
+	public List<Map<String, Object>> getAllManagerId() {
+		return empRepository.getAllManagerId();
 	}
 
 }
