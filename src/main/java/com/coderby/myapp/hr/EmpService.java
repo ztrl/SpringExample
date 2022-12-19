@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class EmpService implements IEmpService {
@@ -43,6 +44,7 @@ public class EmpService implements IEmpService {
 	}
 
 	@Override
+	@Transactional
 	public void deleteEmp(int empid, String email) {
 		empRepository.deleteJobHistory(empid);
 		empRepository.deleteEmp(empid, email);
