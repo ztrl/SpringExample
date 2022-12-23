@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/resources/application-config.xml</config>
 		<config>src/main/resources/application-config-aop.xml</config>
+		<config>src/main/resources/application-config-upload.xml</config>
 	</configs>
 	<autoconfigs>
 		<config>src/main/webapp/WEB-INF/spring/appServlet/servlet-context.xml</config>

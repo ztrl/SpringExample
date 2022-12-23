@@ -21,8 +21,14 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.coderby.myapp" />
+	<context:component-scan base-package="com.coderby.myapp.upload.controller"/>
 	
+	<view-controller path="/WEB-INF/views/upload/index.jsp" view-name="upload"/>
+	
+	<!-- mulitpartResolver -->
+	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<beans:property name="maxUploadSize" value="100000000"/>
+	</beans:bean>
 	
 	
 </beans:beans>
