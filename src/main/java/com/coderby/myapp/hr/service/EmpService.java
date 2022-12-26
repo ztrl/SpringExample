@@ -1,16 +1,21 @@
-package com.coderby.myapp.hr;
+package com.coderby.myapp.hr.service;
 
 import java.util.List;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.coderby.myapp.hr.dao.IEmpRepository;
+import com.coderby.myapp.hr.model.EmpVO;
 
 @Service
 public class EmpService implements IEmpService {
 
 	@Autowired
+	@Qualifier("IEmpRepository")
 	IEmpRepository empRepository;
 	
 	@Override
@@ -44,7 +49,7 @@ public class EmpService implements IEmpService {
 	}
 
 	@Override
-	@Transactional
+	//@Transactional
 	public void deleteEmp(int empid, String email) {
 		empRepository.deleteJobHistory(empid);
 		empRepository.deleteEmp(empid, email);

@@ -10,6 +10,9 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.coderby.myapp.hr.dao.IEmpRepository;
+import com.coderby.myapp.hr.model.EmpVO;
+
 import oracle.net.aso.j;
 
 @Repository
