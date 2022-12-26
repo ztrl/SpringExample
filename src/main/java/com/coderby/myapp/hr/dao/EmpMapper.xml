@@ -62,6 +62,9 @@
 	
 	<delete id="deleteEmp">
 		DELETE employees WHERE employee_id=#{empid} AND email=#{email}
+	<!-- IEmpRepository에서 추상 메소드에 @Param을 주지 않았다면 -->
+	<!--DELETE employees WHERE employee_id=#{param1} AND email=#{param2}-->
+	<!--DELETE employees WHERE employee_id=#{arg0} AND email=#{arg1}-->
 	</delete>
 	
 	<select id="getAllJobId" resultType="hashmap">
